@@ -4,7 +4,9 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity">
+    android:background="#ff0000"
+    android:id="@+id/fragment_map"
+    tools:context=".MainActivity">
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/map"

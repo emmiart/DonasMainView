@@ -105,99 +105,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/header"
-        android:background="#44ff3344"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon01"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="메뉴"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon02"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지도"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon03"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="즐겨찾기"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon04"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="정보"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/text"
@@ -208,11 +116,30 @@
         android:layout_height="wrap_content"
         android:text="앱 출시 기념 이벤트 중"/>
 
+    <FrameLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/text"
+        android:visibility="gone">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/region_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/text"
+        android:visibility="visible">
+    </FrameLayout>
+
     <ScrollView
         android:layout_above="@id/footer"
         android:layout_below="@id/text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/scroll">
 
         <FrameLayout
             android:id="@+id/fragment"

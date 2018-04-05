@@ -42,7 +42,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_map, container, false);
+        View v = inflater.inflate(R.layout.fragment_map, null);
+//        View v = inflater.inflate(R.layout.fragment_map, container, false);
         mapView = v.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
         mapView.onResume();

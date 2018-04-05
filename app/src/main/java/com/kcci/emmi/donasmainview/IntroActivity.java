@@ -27,6 +27,8 @@ public class IntroActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             Intent intent = new Intent(IntroActivity.this, MainActivity.class);
             intent.putExtra("tkykPoints", tkykPoints);
+            //인텐트 넘어가는 시간 지정해주기
+
             startActivity(intent);
         }
     };
